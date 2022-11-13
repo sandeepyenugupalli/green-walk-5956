@@ -7,6 +7,9 @@
     <title>Document</title>
     <link href="loinpage.html"/>
     <style>
+        body{
+            margin: 0;
+        }
         #navbar{
             display: flex;
             width: 100%;
@@ -171,7 +174,79 @@
         
      }
 
-    
+
+
+
+
+
+
+     #contactinfo{
+        display: flex;
+        width: 100%;
+        height: 400px;
+        
+        margin: auto;
+        margin-top: 100px;
+
+        
+
+    }
+
+    #contactinfo>div{
+        width: 25%;
+        height: 100%;
+       
+        background-color: #f9f9f7;
+       
+
+    }
+
+    #subinfo>div{
+       
+      
+       
+        text-align: start;
+       
+    }
+
+    #subinfo>div>p{
+       
+        font-size: 15px;
+        margin-left: 0px;
+    }
+
+
+
+    #endinfo{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        
+        margin: auto;
+
+        
+        
+
+    }
+    #endinfo1{
+        width: 24.9%;
+        height: 100%;
+       
+        background-color: #f9f9f7;
+        text-align: start;
+       
+    }
+    #endinfo2{
+        width: 75%;
+        
+       
+        background-color: #f9f9f7;
+        text-align:start;
+        height: 100%;
+       
+    }
+
+
 
 
 
@@ -211,7 +286,7 @@
     <p>Capture SMTP traffic from staging and dev environments</p>
     <p>Automate test flows and scenarios with flexible API</p>
     <p>Analyze email content for spam score and validate HTML/CSS</p>
-    <button style="margin-left:47%; padding: 12px; padding-left: 20px;
+    <button id="free" style="margin-left:47%; padding: 12px; padding-left: 20px;
     padding-right: 20px; background-color: rgb(76, 202, 76); font-size: 15px; color: white; border: 0px; border-radius: 10px; margin-top: 20px;">Sign up for free </button>
    </div>
     <div id="imgbar">
@@ -295,7 +370,7 @@
     </div>
 
 
-    <div style="background-color:#F9F9F7; width:100%; height: 800px; margin-top: 80px; border: 1px solid green; ">
+    <div style="background-color:#F9F9F7; width:100%; height: 800px; margin-top: 80px;  ">
         <div id="setup">
             <h2 style="font-size:38px;">Setup takes less than 5 minutes</h2>
             <p style="font-size:15px;">Mailtrap Sandbox is compatible with any app or framework that supports SMTP</p>
@@ -345,6 +420,80 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <div id="contactinfo">
+        <div>
+            <img style="width: 50%; margin-top:60px; margin-left:40px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdc8zae3asF8vqlz94TZB28aIIIayDpwZXqw&usqp=CAU" alt="rails"/>
+        </div>
+        <div id="subinfo">
+            <h3 style="margin-left: 140px;">Mail Catch</h3>
+            <div>
+                <p style="margin-left:0px;">Pricing</p>
+            </div>
+            <div>
+                <p>Changelog</p>
+            </div>
+            <div>
+                <p>Status</p>
+            </div>
+            <div>
+                <p>Terms of Service</p>
+            </div>
+            <div>
+                <p>Privacy Policy</p>
+            </div>
+            <div>
+                <p>Navigation Information</p>
+            </div>
+            <div>
+                <p>DPA</p>
+            </div>
+           
+        </div>
+        <div >
+            <h3 style="margin-left:100px;">Railsware Experience</h3>
+            <div>
+                <p style="font-size: 15px;">Railware Blog</p>
+            </div>
+            <div>
+                <p style="font-size: 15px;">Coupler.io</p>
+            </div>
+            <div>
+                <p style="font-size: 15px;">Smart Check List for Jira</p>
+            </div>
+        </div>
+        <div>
+            <h3 style="margin-left:40px;">Contact</h3>
+            <div>
+                <p style="margin-left:0px;">email:support[at]mailcheck.io</p>
+            </div>
+            <img style="margin-left:40px;" src="https://assets.mailtrap.io/packs/assets/landing/facebook-0be93f551b662821a339.svg" alt="fb"/>
+            <img src="https://assets.mailtrap.io/packs/assets/landing/twitter-57fa29ba21896247fdc6.svg" alt="twit"/>
+            <img src="https://assets.mailtrap.io/packs/assets/landing/linkedin-604440460898fa41700c.svg" alt="in"/>
+        </div>
+    </div>
+
+
+    <div id="endinfo">
+        <div id="endinfo1">
+            <p style="margin-top:100px; margin-right:100px; font-size: 20px;">© Railsware Products, Inc.</p>
+
+        </div>
+        <div id="endinfo2">
+            <h3 style="margin-left: 30px;">What is MailCatch?</h3>
+            <div style="justify-content: start; text-align: start;">
+                <p style="font-size:15px; margin-left: 0px;">Mailcatch is a test mail server solution that allows testing email notifications without sending them to the real users of your application. Not only does Mailcatch work as a powerful email test tool, it also lets you view your dummy emails online, forward them to your regular mailbox, share with the team and more! Mailtrap is a mail server test tool built by Railsware Products, Inc., a premium software development consulting company.</p>
+        </div>
+        
+
+        </div>
+    </div>
+
+
+  
 </body>
 </html>
 <script>
@@ -359,6 +508,12 @@
      }
      document.querySelector("#logo").addEventListener("click", displaylogo);
      function displaylogo(){
+        window.location.href="mailcatch.html";
+     }
+
+     document.querySelector("#free").addEventListener("click", funfree);
+
+     function funfree(){
         window.location.href="mailcatch.html";
      }
 
