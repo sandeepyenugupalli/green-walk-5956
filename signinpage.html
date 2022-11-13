@@ -85,7 +85,7 @@
         
      }
 
-     #lcontainer12>input{
+     #lcontainer12>form>input{
 
         width: 98.5%;
         height: 50px;
@@ -95,7 +95,7 @@
 
      }
 
-     #lcontainer12>button{
+     #sign{
         width: 100%;
         height: 50px;
         margin-top: 20px;
@@ -176,13 +176,16 @@
         <div id="lcontainer1">
             <div id="lcontainer12">
                 <h1>Sign Up</h1>
-                <h4>Enter mail</h4>
-                <input type="email"/>
-                <h4>Enter Passsword</h4>
-                <input type="password"/>
+                
+                <form>
+                    <h4 >Enter mail</h4>
+                    <input id="email" type="email"/>
+                <h4 >Enter Passsword</h4>
+                <input id="epass" type="password"/>
                 <h4>Confirm Password</h4>
-                <input type="password"/>
-                <button>Sign Up</button>
+                <input id="cpass" type="password"/>
+                <input id="sign" type="submit" value="sign up"/>
+                </form>
             </div>
             <div id="lcontainer11">
                 <img src="https://assets.mailtrap.io/packs/assets/landing/signup-29d04f096f43afe622ed.svg"/>
@@ -274,4 +277,63 @@
      function displaylog(){
         window.location.href="loginpage.html";
      }
+
+
+     function funsignup(){
+       let umai=document.querySelector("#mail").innerHTML;
+       console.log(umai);
+     }
+
+     let user_data=JSON.parse(localStorage.getItem("user_credentials"))||[];
+
+
+     document.querySelector("form").addEventListener("submit", myfun);
+
+     function myfun(event){
+
+        
+        event.preventDefault();
+        let user_dataobj={};
+
+        let umail=document.querySelector("#email").value;
+
+        user_dataobj.user_mail=umail;
+
+        let uepass=document.querySelector("#epass").value;
+
+        let ucpass=document.querySelector("#cpass").value;
+
+        
+
+        if(uepass==ucpass){
+            user_dataobj.user_password=uepass;
+
+            user_data.push(user_dataobj);
+
+            console.log(user_data);
+
+           
+            
+
+           alert("Sign in Successfull");
+           window.location.href="loginpage.html";
+        }
+
+        else{
+            alert("Your Password and Confirmed Password are not Same");
+        }
+
+        console.log(user_data);
+
+        localStorage.setItem("user_credentials", JSON.stringify(user_data));
+
+        
+
+
+    }
+
+    console.log(user_data);
+    
+
+
 </script>
